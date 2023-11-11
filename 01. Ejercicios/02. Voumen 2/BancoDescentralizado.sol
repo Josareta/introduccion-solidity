@@ -13,6 +13,7 @@ contract BancoDescentralizado {
         require(msg.value > 0, "Debes enviar algo de Ether para poder depositar saldo");
         saldos[msg.sender] += msg.value;
     }
+    
 
     function retirar(uint256 _cantidad) public {
         require(msg.sender != propietario, "No puedes retirar fondos de tus clientes");
